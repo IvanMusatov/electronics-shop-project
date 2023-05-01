@@ -27,6 +27,10 @@ class Item:
     def __str__(self):
         return self.name
 
+    def __add__(self, other):
+        if isinstance(self, Item):
+            return self.quantity + other.quantity
+
     def calculate_total_price(self) -> float:
         """
         Рассчитывает общую стоимость конкретного товара в магазине.

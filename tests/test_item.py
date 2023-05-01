@@ -1,5 +1,4 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
-import pytest
 from src.item import Item
 
 
@@ -59,3 +58,9 @@ def test__repr__():
 def test__str__():
     item1 = Item("Смартфон", 10000, 20)
     assert str(item1) == 'Смартфон'
+
+
+def test_add_():
+    item_one = Item('Телевизор', 20_000, 10)  # создаем объект класса Item
+    item_two = Item('Телефон', 15_000, 15)  # создаем объект класса Phone
+    assert item_one + item_two == 25  # ожидаем в выводе 25
